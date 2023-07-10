@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="images/png" href="icon.png" />
+    <title>Language Translator</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="lang1">
+        <div id="choose-lang1">
+          <p>From</p>
+          <select id="input-lang"></select>
+        </div>
+        <div id="text1">
+          <textarea
+            id="input"
+            placeholder="Enter Your Text Here"
+            autofocus
+          ></textarea>
+        </div>
+        <div id="cu-lang1">
+          <button id="upload">
+            Upload <i class="fa-solid fa-cloud-arrow-up"></i>
+          </button>
+          <input type="file" id="upl" />
+          <button id="input-audio">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+          <button id="input-copy">Copy Text</button>
+        </div>
+      </div>
+      <div id="swap"><i class="fa-solid fa-right-left"></i></div>
+      <div id="lang2">
+        <div id="choose-lang2">
+          <p>To</p>
+          <select id="output-lang"></select>
+        </div>
+        <div id="text2">
+          <textarea
+            id="output"
+            readonly
+            disabled
+            placeholder="Translated Text Will Be Appear Here"
+          ></textarea>
+        </div>
+        <div id="cu-lang2">
+          <button id="download">
+            Download <i class="fa-solid fa-cloud-arrow-down"></i>
+          </button>
+          <button id="output-audio">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+          <button id="output-copy">Copy Text</button>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="countries.js"></script> -->
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

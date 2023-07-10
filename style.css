@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #356aff;
+  --bg-color: #f5f5f5;
+  --light-bg-color: #fff;
+  --dark-bg-color: #232323;
+  --secondary-bg-color: #1b1a1a;
+  --text-color: #111116;
+  --light-text-color: #cdccd1;
+  --primary-text-color: #fff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#container {
+  position: relative;
+  width: 80vw;
+  max-width: 1200px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#container #lang1,
+#lang2 {
+  position: relative;
+  height: 430px;
+  width: 80vw;
+  max-width: 400px;
+  background-color: var(--light-bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+#choose-lang1,
+#choose-lang2 {
+  position: relative;
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+select {
+  position: relative;
+  width: 80%;
+  padding: 5px;
+  font-size: 14px;
+  outline: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+}
+
+option {
+  background: var(--bg-color);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+#swap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  min-height: 30px;
+  min-width: 30px;
+  color: var(--light-bg-color);
+  cursor: pointer;
+}
+
+textarea {
+  position: relative;
+  resize: none;
+  height: 300px;
+  width: 100%;
+  margin: 10px 0;
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 5px;
+  border: 1px solid var(--light-text-color);
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+#cu-lang1,
+#cu-lang2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  position: relative;
+  border: none;
+  color: var(--text-color);
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: var(--light-text-color);
+  transition: 0.3s;
+  margin: 0px 10px 10px;
+}
+
+#input-audio,
+#output-audio {
+  min-width: 40px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#output-copy,
+#input-copy {
+  /* width: 130px; */
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+#upload,
+#download {
+  /* width: 130px; */
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.fa-cloud-arrow-up,
+.fa-cloud-arrow-down {
+  padding-left: 5px;
+}
+
+#upl {
+  position: absolute;
+  opacity: 0;
+  z-index: -999;
+}
+
+textarea:focus {
+  outline: none !important;
+  border-color: var(--light-text-color);
+}
+
+@media (max-width: 800px) {
+  #container {
+    flex-direction: column;
+    margin: 120px;
+  }
+  #swap {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 380px) {
+  button {
+    font-size: 10px;
+  }
+}
