@@ -1,356 +1,788 @@
 const languages = [
   {
-    no: "0",
+    id: "1",
     name: "Auto",
-    native: "Detect",
     code: "auto",
+    native: "Detect"
   },
   {
-    no: "1",
+    id: "2",
     name: "Afrikaans",
-    native: "Afrikaans",
     code: "af",
+    native: "Afrikaans"
   },
   {
-    no: "2",
+    id: "3",
     name: "Albanian",
-    native: "Shqip",
-    code: "sq",
+    code: "sq-AL",
+    native: "shqiptare"
   },
   {
-    no: "3",
+    id: "4",
+    name: "Amharic",
+    code: "am-ET",
+    native: "አማርኛ"
+  },
+  {
+    id: "5",
     name: "Arabic",
-    native: "عربي",
-    code: "ar",
+    code: "ar-SA",
+    native: "عربي"
   },
   {
-    no: "4",
+    id: "6",
     name: "Armenian",
-    native: "Հայերէն",
     code: "hy",
+    native: "հայերեն"
   },
   {
-    no: "5",
+    id: "7",
+    name: "Assamese",
+    code: "as",
+    native: "অসমীয়া"
+  },
+  {
+    id: "8",
+    name: "Aymara",
+    code: "ay",
+    native: "Aymara"
+  },
+  {
+    id: "9",
     name: "Azerbaijani",
-    native: "آذربایجان دیلی",
     code: "az",
+    native: "Azərbaycan"
   },
   {
-    no: "6",
+    id: "10",
+    name: "Bambara",
+    code: "bm",
+    native: "Bamanankan"
+  },
+  {
+    id: "11",
     name: "Basque",
-    native: "Euskara",
     code: "eu",
+    native: "euskara"
   },
   {
-    no: "7",
+    id: "12",
     name: "Belarusian",
-    native: "Беларуская",
-    code: "be",
+    code: "be-BY",
+    native: "беларускі"
   },
   {
-    no: "8",
+    id: "13",
+    name: "Bangla",
+    code: "bn-IN",
+    native: "বাংলা"
+  },
+  {
+    id: "14",
+    name: "Bhojpuri",
+    code: "bho",
+    native: "भोजपुरी"
+  },
+  {
+    id: "15",
+    name: "Bosnian",
+    code: "bs-BA",
+    native: "bosanski"
+  },
+  {
+    id: "16",
     name: "Bulgarian",
-    native: "Български",
     code: "bg",
+    native: "български"
   },
   {
-    no: "9",
+    id: "17",
     name: "Catalan",
-    native: "Català",
-    code: "ca",
+    code: "ca-ES",
+    native: "català"
   },
   {
-    no: "10",
+    id: "18",
+    name: "Cebuano",
+    code: "ceb",
+    native: "Cebuano"
+  },
+  {
+    id: "19",
     name: "Chinese (Simplified)",
-    native: "中文简体",
     code: "zh-CN",
+    native: "中文简体"
   },
   {
-    no: "11",
+    id: "20",
     name: "Chinese (Traditional)",
-    native: "中文繁體",
     code: "zh-TW",
+    native: "中文繁體"
   },
   {
-    no: "12",
+    id: "21",
+    name: "Corsican",
+    code: "co",
+    native: "Corsu"
+  },
+  {
+    id: "22",
     name: "Croatian",
-    native: "Hrvatski",
     code: "hr",
+    native: "Hrvatski"
   },
   {
-    no: "13",
+    id: "23",
     name: "Czech",
-    native: "Čeština",
-    code: "cs",
+    code: "cs-CZ",
+    native: "čeština"
   },
   {
-    no: "14",
+    id: "24",
     name: "Danish",
-    native: "Dansk",
-    code: "da",
+    code: "da-DK",
+    native: "dansk"
   },
   {
-    no: "15",
+    id: "25",
+    name: "Dhivehi",
+    code: "dv",
+    native: "ދިވެހި"
+  },
+  {
+    id: "26",
+    name: "Dogri",
+    code: "doi",
+    native: "डोगरी"
+  },
+  {
+    id: "27",
     name: "Dutch",
-    native: "Nederlands",
     code: "nl",
+    native: "Nederlands"
   },
   {
-    no: "16",
+    id: "28",
     name: "English",
-    native: "English",
-    code: "en",
+    code: "en-US",
+    native: "English"
   },
   {
-    no: "17",
-    name: "Estonian",
-    native: "Eesti keel",
+    id: "29",
+    name: "Esperanto",
+    code: "eo",
+    native: "Esperanto"
+  },
+  {
+    id: "30",
+    name: "Estonia",
     code: "et",
+    native: "Eesti"
   },
   {
-    no: "18",
+    id: "31",
+    name: "Ewe",
+    code: "ee",
+    native: "Eʋegbe"
+  },
+  {
+    id: "32",
     name: "Filipino",
-    native: "Filipino",
-    code: "tl",
+    code: "fil",
+    native: "Filipino"
   },
   {
-    no: "19",
+    id: "33",
     name: "Finnish",
-    native: "Suomi",
     code: "fi",
+    native: "Suomalainen"
   },
   {
-    no: "20",
+    id: "34",
     name: "French",
-    native: "Français",
-    code: "fr",
+    code: "fr-FI",
+    native: "Français"
   },
   {
-    no: "21",
+    id: "35",
+    name: "Frisian",
+    code: "fy",
+    native: "Frysk"
+  },
+  {
+    id: "36",
     name: "Galician",
-    native: "Galego",
     code: "gl",
+    native: "galego"
   },
   {
-    no: "22",
+    id: "37",
     name: "Georgian",
-    native: "ქართული",
     code: "ka",
+    native: "ქართული"
   },
   {
-    no: "23",
+    id: "38",
     name: "German",
-    native: "Deutsch",
-    code: "de",
+    code: "de-DE",
+    native: "Deutsch"
   },
   {
-    no: "24",
+    id: "39",
     name: "Greek",
-    native: "Ελληνικά",
-    code: "el",
+    code: "el-GR",
+    native: "Ελληνικά"
   },
   {
-    no: "25",
+    id: "40",
+    name: "Guarani",
+    code: "gn",
+    native: "guarani"
+  },
+  {
+    id: "41",
+    name: "Gujarati",
+    code: "gu",
+    native: "ગુજરાતી"
+  },
+  {
+    id: "42",
     name: "Haitian Creole",
-    native: "Kreyòl ayisyen",
     code: "ht",
+    native: "Kreyòl ayisyen"
   },
   {
-    no: "26",
+    id: "43",
+    name: "Hausa",
+    code: "ha",
+    native: "Hausa"
+  },
+  {
+    id: "44",
+    name: "Hawaiian",
+    code: "haw",
+    native: "ʻŌlelo Hawaiʻi"
+  },
+  {
+    id: "45",
     name: "Hebrew",
-    native: "עברית",
-    code: "iw",
+    code: "he-IL",
+    native: "עִברִית"
   },
   {
-    no: "27",
+    id: "46",
     name: "Hindi",
-    native: "हिन्दी",
-    code: "hi",
+    code: "hi-IN",
+    native: "हिंदी"
   },
   {
-    no: "28",
+    id: "47",
+    name: "Hmong",
+    code: "hmn",
+    native: "Hmoob"
+  },
+  {
+    id: "48",
     name: "Hungarian",
-    native: "Magyar",
-    code: "hu",
+    code: "hu-HU",
+    native: "Magyar"
   },
   {
-    no: "29",
+    id: "49",
     name: "Icelandic",
-    native: "Íslenska",
     code: "is",
+    native: "íslenskur"
   },
   {
-    no: "30",
+    id: "50",
+    name: "Igbo",
+    code: "ig",
+    native: "Igbo"
+  },
+  {
+    id: "51",
+    name: "Ilocano",
+    code: "ilo",
+    native: "Ilocano"
+  },
+  {
+    id: "52",
     name: "Indonesian",
-    native: "Bahasa Indonesia",
-    code: "id",
+    code: "id-ID",
+    native: "bahasa"
   },
   {
-    no: "31",
+    id: "53",
     name: "Irish",
-    native: "Gaeilge",
     code: "ga",
+    native: "Gaeilge"
   },
   {
-    no: "32",
+    id: "54",
     name: "Italian",
-    native: "Italiano",
-    code: "it",
+    code: "it-IT",
+    native: "Italiano"
   },
   {
-    no: "33",
+    id: "55",
     name: "Japanese",
-    native: "日本語",
-    code: "ja",
+    code: "ja-JP",
+    native: "日本"
   },
   {
-    no: "34",
+    id: "56",
+    name: "Javanese",
+    code: "jv",
+    native: "basa jawa"
+  },
+  {
+    id: "57",
+    name: "Kannada",
+    code: "kn",
+    native: "ಕನ್ನಡ"
+  },
+  {
+    id: "58",
+    name: "Kazakh",
+    code: "kk",
+    native: "қазақ"
+  },
+  {
+    id: "59",
+    name: "Khmer",
+    code: "km",
+    native: "ខ្មែរ"
+  },
+  {
+    id: "60",
+    name: "Kinyarwanda",
+    code: "rw",
+    native: "kinyarwanda"
+  },
+  {
+    id: "61",
+    name: "Konkani",
+    code: "gom",
+    native: "कोंकणी"
+  },
+  {
+    id: "62",
     name: "Korean",
-    native: "한국어",
-    code: "ko",
+    code: "ko-KR",
+    native: "한국인"
   },
   {
-    no: "35",
+    id: "63",
+    name: "Krio",
+    code: "kri",
+    native: "Krio"
+  },
+  {
+    id: "64",
+    name: "Kurdish",
+    code: "ku",
+    native: "Kurdî"
+  },
+  {
+    id: "65",
+    name: "Kurdish (Sorani)",
+    code: "ckb",
+    native: "کوردی"
+  },
+  {
+    id: "66",
+    name: "Kyrgyz",
+    code: "ky",
+    native: "Кыргызча"
+  },
+  {
+    id: "67",
+    name: "Lao",
+    code: "lo",
+    native: "ພາສາລາວ"
+  },
+  {
+    id: "68",
+    name: "Latin",
+    code: "la",
+    native: "Latinus"
+  },
+  {
+    id: "69",
     name: "Latvian",
-    native: "Latviešu",
     code: "lv",
+    native: "latviski"
   },
   {
-    no: "36",
+    id: "70",
+    name: "Lingala",
+    code: "ln",
+    native: "Lingala"
+  },
+  {
+    id: "71",
     name: "Lithuanian",
-    native: "Lietuvių kalba",
     code: "lt",
+    native: "lietuvių"
   },
   {
-    no: "37",
+    id: "72",
+    name: "Luganda",
+    code: "lg",
+    native: "Oluganda"
+  },
+  {
+    id: "73",
+    name: "Luxembourgish",
+    code: "lb",
+    native: "lëtzebuergesch"
+  },
+  {
+    id: "74",
     name: "Macedonian",
-    native: "Македонски",
     code: "mk",
+    native: "македонски"
   },
   {
-    no: "38",
+    id: "75",
+    name: "Maithili",
+    code: "mai",
+    native: "मैथिली"
+  },
+  {
+    id: "76",
+    name: "Malagasy",
+    code: "mg",
+    native: "Malagasy"
+  },
+  {
+    id: "77",
     name: "Malay",
-    native: "Malay",
     code: "ms",
+    native: "Melayu"
   },
   {
-    no: "39",
+    id: "78",
+    name: "Malayalam",
+    code: "ml",
+    native: "മലയാളം"
+  },
+  {
+    id: "79",
     name: "Maltese",
-    native: "Malti",
     code: "mt",
+    native: "Malti"
   },
   {
-    no: "40",
+    id: "80",
+    name: "Māori",
+    code: "mi",
+    native: "Māori"
+  },
+  {
+    id: "81",
+    name: "Marathi",
+    code: "mr",
+    native: "मराठी"
+  },
+  {
+    id: "82",
+    name: "Mizo",
+    code: "lus",
+    native: "Mizo"
+  },
+  {
+    id: "83",
+    name: "Mongolian",
+    code: "mn",
+    native: "Монгол"
+  },
+  {
+    id: "84",
+    name: "Myanmar (Burmese)",
+    code: "my",
+    native: "မြန်မာ"
+  },
+  {
+    id: "85",
+    name: "Nepali",
+    code: "ne",
+    native: "नेपाली"
+  },
+  {
+    id: "86",
     name: "Norwegian",
-    native: "Norsk",
-    code: "no",
+    code: "no-NO",
+    native: "norsk"
   },
   {
-    no: "41",
+    id: "87",
+    name: "Nyanja (Chichewa)",
+    code: "ny",
+    native: "Nyanja"
+  },
+  {
+    id: "88",
+    name: "Odia",
+    code: "or",
+    native: "ଓଡିଆ"
+  },
+  {
+    id: "89",
+    name: "Oromo",
+    code: "om",
+    native: "Afaan"
+  },
+  {
+    id: "90",
+    name: "Pashto",
+    code: "ps-PK",
+    native: "پښتو"
+  },
+  {
+    id: "91",
     name: "Persian",
-    native: "فارسی",
-    code: "fa",
+    code: "fa-IR",
+    native: "فارسی"
   },
   {
-    no: "42",
+    id: "92",
     name: "Polish",
-    native: "Polski",
-    code: "pl",
+    code: "pl-PL",
+    native: "Polski"
   },
   {
-    no: "43",
+    id: "93",
     name: "Portuguese",
-    native: "Português",
-    code: "pt",
+    code: "pt-PT",
+    native: "Português"
   },
   {
-    no: "44",
+    id: "94",
+    name: "Punjabi",
+    code: "pa-IN",
+    native: "ਪੰਜਾਬੀ"
+  },
+  {
+    id: "95",
+    name: "Quechua",
+    code: "qu",
+    native: "Runasimi"
+  },
+  {
+    id: "96",
     name: "Romanian",
-    native: "Română",
-    code: "ro",
+    code: "ro-RO",
+    native: "Română"
   },
   {
-    no: "45",
+    id: "97",
     name: "Russian",
-    native: "Русский",
-    code: "ru",
+    code: "ru-RU",
+    native: "Русский"
   },
   {
-    no: "46",
+    id: "98",
+    name: "Samoan",
+    code: "sm-WS",
+    native: "Samoa"
+  },
+  {
+    id: "99",
+    name: "Sanskrit",
+    code: "sa",
+    native: "संस्कृत"
+  },
+  {
+    id: "100",
+    name: "Scots Gaelic",
+    code: "gd",
+    native: "Gàidhlig na h-Alba"
+  },
+  {
+    id: "101",
     name: "Serbian",
-    native: "Српски",
-    code: "sr",
+    code: "sr-RS",
+    native: "Српски"
   },
   {
-    no: "47",
+    id: "102",
+    name: "Shona",
+    code: "sn-ZW",
+    native: "Shona"
+  },
+  {
+    id: "103",
+    name: "Sindhi",
+    code: "sd",
+    native: "سنڌي"
+  },
+  {
+    id: "104",
+    name: "Sinhala",
+    code: "si-LK",
+    native: "සිංහල"
+  },
+  {
+    id: "105",
     name: "Slovak",
-    native: "Slovenčina",
-    code: "sk",
+    code: "sk-SK",
+    native: "slovenský"
   },
   {
-    no: "48",
+    id: "106",
     name: "Slovenian",
-    native: "Slovensko",
     code: "sl",
+    native: "Slovenščina"
   },
   {
-    no: "49",
+    id: "107",
+    name: "Somali",
+    code: "so-SO",
+    native: "Soomaali"
+  },
+  {
+    id: "108",
     name: "Spanish",
-    native: "Español",
-    code: "es",
+    code: "es-ES",
+    native: "Español"
   },
   {
-    no: "50",
+    id: "109",
+    name: "Sundanese",
+    code: "su",
+    native: "basa Sunda"
+  },
+  {
+    id: "110",
     name: "Swahili",
-    native: "Kiswahili",
-    code: "sw",
+    code: "sw-SZ",
+    native: "kiswahili"
   },
   {
-    no: "51",
+    id: "111",
     name: "Swedish",
-    native: "Svenska",
-    code: "sv",
+    code: "sv-SE",
+    native: "svenska"
   },
   {
-    no: "52",
+    id: "112",
+    name: "Tajik",
+    code: "tg",
+    native: "тоҷикӣ"
+  },
+  {
+    id: "113",
+    name: "Tamil",
+    code: "ta-LK",
+    native: "தமிழ்"
+  },
+  {
+    id: "114",
+    name: "Tatar",
+    code: "tt",
+    native: "Татар"
+  },
+  {
+    id: "115",
+    name: "Telugu",
+    code: "te-IN",
+    native: "తెలుగు"
+  },
+  {
+    id: "116",
     name: "Thai",
-    native: "ไทย",
-    code: "th",
+    code: "th-TH",
+    native: "แบบไทย"
   },
   {
-    no: "53",
+    id: "117",
+    name: "Tigrinya",
+    code: "ti-TI",
+    native: "ትግሪኛ"
+  },
+  {
+    id: "118",
+    name: "Tsonga",
+    code: "ts",
+    native: "Tsonga"
+  },
+  {
+    id: "119",
     name: "Turkish",
-    native: "Türkçe",
-    code: "tr",
+    code: "tr-TR",
+    native: "Türkçe"
   },
   {
-    no: "54",
+    id: "120",
+    name: "Turkmen",
+    code: "tk-TM",
+    native: "Türkmenler"
+  },
+  {
+    id: "121",
     name: "Ukrainian",
-    native: "Українська",
-    code: "uk",
+    code: "uk-UA",
+    native: "українська"
   },
   {
-    no: "55",
+    id: "122",
     name: "Urdu",
-    native: "اردو",
     code: "ur",
+    native: "اردو"
   },
   {
-    no: "56",
+    id: "123",
+    name: "Uyghur",
+    code: "ug",
+    native: "ئۇيغۇر"
+  },
+  {
+    id: "124",
+    name: "Uzbek",
+    code: "uz-UZ",
+    native: "o'zbek"
+  },
+  {
+    id: "125",
     name: "Vietnamese",
-    native: "Tiếng Việt",
-    code: "vi",
+    code: "vi-VN",
+    native: "Tiếng Việt"
   },
   {
-    no: "57",
+    id: "126",
     name: "Welsh",
-    native: "Cymraeg",
-    code: "cy",
+    code: "cy-GB",
+    native: "Cymraeg"
   },
   {
-    no: "58",
+    id: "127",
+    name: "Western Frisian",
+    code: "fy",
+    native: "Westerfrysk"
+  },
+  {
+    id: "128",
+    name: "Xhosa",
+    code: "xh-ZA",
+    native: "isiXhosa"
+  },
+  {
+    id: "129",
     name: "Yiddish",
-    native: "ייִדיש",
-    code: "yi",
+    code: "yi-YD",
+    native: "יידיש"
+  },
+  {
+    id: "130",
+    name: "Yoruba",
+    code: "yo",
+    native: "Detect"
+  },
+  {
+    id: "131",
+    name: "Zulu",
+    code: "zu-ZA",
+    native: "Detect"
   },
 ];
