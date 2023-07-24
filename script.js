@@ -31,7 +31,6 @@ const translate = () => {
   let text = input.value;
   let translateFrom = select[0].value;
   let translateTo = select[1].value;
-  if(!text){return;}
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${translateFrom}&tl=${translateTo}&dt=t&q=${encodeURI(
     text
   )}`;
@@ -154,9 +153,3 @@ outputAudio.onclick = () => {
   speech.lang = select[1].value;
   speechSynthesis.speak(speech);
 };
-
-let voices = [];
-window.speechSynthesis.onvoiceschanged = ()=>{
-  voices = window.speechSynthesis.getVoices();
-  console.log(voices);
-}
